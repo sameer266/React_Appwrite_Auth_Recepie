@@ -1,0 +1,106 @@
+/* recepie.css */
+
+.recepie {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.recepie h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.recipe-list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.recipe-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #4CAF50;
+    transition: transform 0.3s ease;
+}
+
+.recipe-item:hover .recipe-image {
+    transform: scale(1.05);
+}
+
+.recipe-item h4 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 16px;
+    font-weight: 600;
+}
+
+/* Ingredients Section */
+.ingredients-section, .instructions-section {
+    padding: 0 16px;
+    margin: 10px 0;
+}
+
+.ingredients-section h5, .instructions-section h5 {
+    font-size: 1.2rem;
+    color: #4CAF50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.ingredients-list, .instructions-list {
+    padding: 0 16px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.ingredients-list li, .instructions-list li {
+    margin-bottom: 8px;
+}
+
+.instructions-list li::marker, .ingredients-list li::marker {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recepie h3 {
+        font-size: 2rem;
+    }
+    .recipe-item h4 {
+        font-size: 1.4rem;
+    }
+    .instructions-list, .ingredients-list {
+        font-size: 0.9rem;
+    }
+}

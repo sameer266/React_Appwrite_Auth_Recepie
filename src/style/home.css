@@ -1,0 +1,59 @@
+.home {
+    margin-top: 90px;
+    height: 400px
+}
+
+/* The box that will slide in from the top */
+.box {
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;  /* Initially positioned in the middle of the screen vertically */
+    left: 50%;  /* Horizontally centered */
+    transform: translate(-50%, -50%);  /* Adjust for exact centering */
+    width: 60%;
+    height: 300px;  /* Adjust the width of the box */
+    background-color: #424242b6;  /* Adjust the background color */
+    padding: 15px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0)  ;
+    z-index: 1000; /* Ensure it is on top of other elements */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for both position and opacity */
+}
+.box p{
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 6px white ;
+}
+
+/* When the box should be shown, it slides in */
+.box.show {
+    top: 50%;  /* Keep it vertically centered */
+    opacity: 1;  /* Make it visible */
+    transform: translate(-50%, -50%);  /* Keep it centered */
+}
+
+/* Style the button inside the box */
+.login-btn {
+    position: relative;
+    color: white;
+    top: 50%;  /* Initially positioned in the middle of the screen vertically */
+    left: 50%;  /* Horizontally centered */
+    transform: translate(-50%, -50%);
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Content styling */
+.content {
+    margin-top: 60px; /* Space for the box */
+    padding: 20px;
+}
